@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="img/idaho.ico">
+    <title>Nate's Assignment 1</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nate Harker</h1>
+
+        <img alt="Nate Italy" height="250px" width="auto" src="img/nate_italy.jpg" />
+        <p class="image-caption">(I love to travel, this picture is in Italy from my trip last summer)</p>
+
+        <p>I am very excited for this course as it seems that ASP.NET MVC Core is a very powerful framework 
+        and in very high demand these days. I hope during the course of the class that I can become proficient using the platform, 
+        have a better understanding of the MVC architecture, and learn valuable security techniques.</p>
+        <br />
+
+        <p>Top 3 post graduation jobs:</p>
+        <div class="align-left">
+            <ul>
+                <li>Machine Learning Engineer</li>
+                <li>Data Analyst</li>
+                <li>IT Management Consulting</li>
+            </ul>
+        </div>
+        <br />
+        <hr />
+
+        <h2>Grade Calculator</h2>
+        <p class="image-caption">Enter a percent for each grade catgory (i.e. 95 for 95%)</p>
+        <form action="#" method="get" onsubmit="return false">
+            <label for="assignments">Assignments:</label>
+            <input id="assignments" type="number" />
+            <br />
+            <label for="groupProject">Group Project:</label>
+            <input id="groupProject" type="number" />
+            <br />
+            <label for="quizzes">Quizzes:</label>
+            <input id="quizzes" type="number" />
+            <br />
+            <label for="exams">Exams:</label>
+            <input id="exams" type="number" />
+            <br />
+            <label for="intex">INTEX:</label>
+            <input id="intex" type="number" />
+            <br />
+            <br />
+            <input type="submit" value="Calculate Grade" id="submitButton" class="button"/>
+        </form>
+        <p id="percentCalculated"></p>
+        <p id="letterCalculated"></p>
+    </div>
+
+    <script src="js/grade-calc.js"></script>
+
+</body>
+</html>
