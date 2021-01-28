@@ -1,13 +1,11 @@
 // JavaScript source code
-var submit = document.getElementById("submitButton"); 
-
-submit.addEventListener("click", function () {
+$("#submitButton").click ( function () {
     //assign numbers in input fields to variables and calculate grade weight
-    var assignmentsPercent = document.getElementById("assignments").value * 0.5;
-    var groupProjectPercent = document.getElementById("groupProject").value * 0.1;
-    var quizzesPercent = document.getElementById("quizzes").value * 0.1;
-    var examsPercent = document.getElementById("exams").value * 0.2;
-    var intexPercent = document.getElementById("intex").value * 0.1;
+    var assignmentsPercent = $("#assignments").val() * 0.5;
+    var groupProjectPercent = $("#groupProject").val() * 0.1;
+    var quizzesPercent = $("#quizzes").val() * 0.1;
+    var examsPercent = $("#exams").val() * 0.2;
+    var intexPercent = $("#intex").val() * 0.1;
 
     //calculate final grade percent 
     var percentCalculated = assignmentsPercent + groupProjectPercent + quizzesPercent + examsPercent + intexPercent;
@@ -54,7 +52,9 @@ submit.addEventListener("click", function () {
     //round percent to two decimals and add % sign
     percentCalculated = (percentCalculated.toFixed(2) + "%");
 
+    alert("Percent Grade: " + percentCalculated + "\nLetter Grade: " + letterCalculated);
+
     //return results to p tags in html page
-    document.getElementById("percentCalculated").innerHTML = "Percent Grade: " + percentCalculated;
-    document.getElementById("letterCalculated").innerHTML = "Letter Grade: " + letterCalculated;
+    $("#percentCalculated").html("Percent Grade: " + percentCalculated);
+    $("#letterCalculated").html("Letter Grade: " + letterCalculated);
 });
