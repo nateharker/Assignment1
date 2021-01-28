@@ -22,16 +22,16 @@ namespace Assignment1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //function to handle errors so debug page is only displayed if project is in development, otherwise return a user friendly view
             if (env.IsEnvironment("Development"))
             {
-
+                app.UseDeveloperExceptionPage();
             }
             else
             {
-                //Add error page
+                app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseDeveloperExceptionPage();
             app.UseNodeModules();
             app.UseStaticFiles();
             app.UseRouting();

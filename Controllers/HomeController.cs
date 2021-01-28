@@ -84,12 +84,22 @@ namespace Assignment1.Controllers
                 letterCalculated = "A";
             }
 
-            //round percent to two decimals and add % sign
+            //round percent to two decimals
             percentCalculated = Math.Round(percentCalculated, 2);
+
+            //Put results into view bags that will be displayed on the GradeCalc view
             @ViewBag.PercentGrade = ("Percent Grade: " + percentCalculated + "%");
             @ViewBag.LetterGrade = ("Letter Grade: " + letterCalculated);
 
             return View("GradeCalc");
+        }
+        public IActionResult AboutMe()
+        {
+            return View();
+        }
+        public IActionResult Error()
+        {
+            return View();
         }
     }
 }

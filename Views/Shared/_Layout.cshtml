@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<!--Common stlying for all of the views!-->
+
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -13,13 +15,11 @@
     <div class="container">
         <header>
             <h1>@ViewBag.Header</h1>
-            <menu class="align-left">
-                <ul>
-                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="Home" asp-action="GradeCalc">Grade Calcuator</a></li>
-                </ul>
-            </menu>
+            <a asp-controller="Home" asp-action="Index"><p class="inline button">Home</p></a>
+            <a asp-controller="Home" asp-action="AboutMe"><p class="inline button">About Me</p></a>
+            <a asp-controller="Home" asp-action="GradeCalc"><p class="inline button">Grade Calcuator</p></a>
         </header>
+        <br />
 
         @RenderBody()
 
