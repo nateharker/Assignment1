@@ -1,0 +1,44 @@
+﻿---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nathanh3/is413.nathanharker.com/
+    - /bin//cp .gitattributes $DEPLOYPATH
+    - /bin//cp .gitignore $DEPLOYPATH
+    - /bin/cp -R .git $DEPLOYPATH
+    - /bin/cp -R .vs $DEPLOYPATH
+    - /bin//cp appsettings.Development.json $DEPLOYPATH
+    - /bin//cp appsettings.json $DEPLOYPATH
+    - /bin//cp Assignment1.csproj $DEPLOYPATH
+    - /bin//cp Assignment1.csproj.user $DEPLOYPATH
+    - /bin//cp Assignment1.sln $DEPLOYPATH
+    - /bin/cp -R bin $DEPLOYPATH
+    - /bin/cp -R Controllers $DEPLOYPATH
+    - /bin/cp -R Models $DEPLOYPATH
+    - /bin/cp -R node_modules $DEPLOYPATH
+    - /bin/cp -R obj $DEPLOYPATH
+    - /bin/cp -R Properties $DEPLOYPATH
+    - /bin/cp -R Views $DEPLOYPATH
+    - /bin/cp -R wwwroot $DEPLOYPATH
+    - /bin//cp package.json $DEPLOYPATH
+    - /bin//cp package-lock.json $DEPLOYPATH
+    - /bin//cp Program.cs $DEPLOYPATH
+    - /bin//cp Startup.cs $DEPLOYPATH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
